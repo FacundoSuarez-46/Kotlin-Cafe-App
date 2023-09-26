@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productInputFragment">
+
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.utec.fannog.ui_proyecto_integrador.view.ProductListFragment"
+        android:label="ProductListFragment" >
+        <action
+            android:id="@+id/action_productListFragment_to_productInputFragment"
+            app:destination="@id/productInputFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productInputFragment"
+        android:name="com.utec.fannog.ui_proyecto_integrador.view.ProductInputFragment"
+        android:label="ProductInputFragment" >
+        <action
+            android:id="@+id/action_productInputFragment_to_productListFragment"
+            app:destination="@id/productListFragment" />
+    </fragment>
+</navigation>
